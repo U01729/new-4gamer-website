@@ -3,44 +3,330 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>فهرس ألعاب 4GAMER</title>
+    <title>فهرس ألعاب 4GAMER - أكبر مكتبة ألعاب عربية</title>
+    <meta name="description" content="اكتشف أفضل الألعاب لجميع المنصات مع 4GAMER. تحميل مباشر وسريع لألعاب PS4, PS3, PC وأكثر.">
+    <meta name="keywords" content="ألعاب, تحميل, PS4, PS3, PC, 4GAMER, العاب عربية">
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;900&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="container">
-        <header class="main-header">
-            <h1>🎮 فهرس ألعاب 4GAMER</h1>
-            <p class="subtitle">مكتبة شاملة لجميع الألعاب المتاحة للتحميل</p>
-        </header>
-
-        <main>
-            <div class="search-section">
-                <input type="text" id="searchInput" placeholder="ابحث عن لعبة..." class="search-box">
-                <div class="filter-buttons">
-                    <button class="filter-btn active" data-platform="all">جميع المنصات</button>
-                    <button class="filter-btn" data-platform="ps4">PlayStation 4</button>
-                    <button class="filter-btn" data-platform="ps3">PlayStation 3</button>
-                    <button class="filter-btn" data-platform="pc">PC</button>
-                </div>
-            </div>
-
-            <div class="games-grid" id="gamesGrid">
-                <!-- الألعاب ستُضاف هنا ديناميكياً -->
-                <div class="loading">جاري تحميل الألعاب...</div>
-            </div>
-        </main>
-
-        <footer class="footer">
-            <div class="footer-content">
-                <p>&copy; 2025 <a href="https://t.me/C9_9M" target="_blank">4GAMER</a>. جميع الحقوق محفوظة.</p>
-                <div class="social-links">
-                    <a href="https://t.me/C9_9M" target="_blank">القناة الرئيسية</a>
-                    <a href="https://t.me/GAMESPS4I" target="_blank">قناة الألعاب</a>
-                </div>
-            </div>
-        </footer>
+    <!-- شاشة التحميل -->
+    <div id="loadingScreen" class="loading-screen">
+        <div class="loading-content">
+            <div class="loading-logo">4GAMER</div>
+            <div class="loading-spinner"></div>
+            <div class="loading-text">جاري تحميل فهرس الألعاب...</div>
+        </div>
     </div>
 
-    <script src="script.js" defer></script>
+    <!-- الهيدر الرئيسي -->
+    <header class="main-header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="nav-brand">
+                    <h1 class="logo">4GAMER</h1>
+                    <span class="tagline">فهرس الألعاب</span>
+                </div>
+                
+                <div class="nav-menu" id="navMenu">
+                    <a href="#home" class="nav-link active">الرئيسية</a>
+                    <a href="#games" class="nav-link">الألعاب</a>
+                    <a href="#platforms" class="nav-link">المنصات</a>
+                    <a href="#about" class="nav-link">حول الموقع</a>
+                    <a href="admin.html" class="nav-link admin-link">لوحة الإدارة</a>
+                </div>
+                
+                <div class="nav-toggle" id="navToggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- القسم الرئيسي -->
+    <main class="main-content">
+        <!-- قسم البطل -->
+        <section id="home" class="hero-section">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1 class="hero-title">
+                        <span class="title-main">مرحباً بك في</span>
+                        <span class="title-brand">4GAMER</span>
+                    </h1>
+                    <p class="hero-description">
+                        أكبر مكتبة ألعاب عربية على الإنترنت. اكتشف وحمّل أفضل الألعاب لجميع المنصات
+                        مع روابط مباشرة وسريعة. انضم إلى مجتمع اللاعبين العرب واستمتع بتجربة لعب لا تُنسى.
+                    </p>
+                    <div class="hero-stats">
+                        <div class="stat-item">
+                            <span class="stat-number" id="totalGamesCount">15+</span>
+                            <span class="stat-label">لعبة متاحة</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">3</span>
+                            <span class="stat-label">منصات مدعومة</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">17K+</span>
+                            <span class="stat-label">متابع</span>
+                        </div>
+                    </div>
+                    <div class="hero-actions">
+                        <button class="btn btn-primary" onclick="scrollToSection('games')">
+                            استكشف الألعاب
+                        </button>
+                        <a href="https://t.me/C9_9M" target="_blank" class="btn btn-secondary">
+                            انضم للقناة
+                        </a>
+                    </div>
+                </div>
+                <div class="hero-visual">
+                    <div class="floating-cards">
+                        <div class="game-card-mini" style="--delay: 0s">
+                            <img src="assets/ghost_of_tsushima_thumb.jpg" alt="Ghost of Tsushima">
+                        </div>
+                        <div class="game-card-mini" style="--delay: 0.5s">
+                            <img src="assets/god_of_war_thumb.jpg" alt="God of War">
+                        </div>
+                        <div class="game-card-mini" style="--delay: 1s">
+                            <img src="assets/spiderman_thumb.jpg" alt="Spider-Man">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- قسم البحث والفلترة -->
+        <section class="search-section">
+            <div class="container">
+                <div class="search-container">
+                    <div class="search-box">
+                        <input type="text" id="searchInput" placeholder="ابحث عن لعبتك المفضلة...">
+                        <button class="search-btn" onclick="performSearch()">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="11" cy="11" r="8"></circle>
+                                <path d="m21 21-4.35-4.35"></path>
+                            </svg>
+                        </button>
+                    </div>
+                    
+                    <div class="filter-tabs">
+                        <button class="filter-tab active" data-platform="all">جميع المنصات</button>
+                        <button class="filter-tab" data-platform="ps4">PlayStation 4</button>
+                        <button class="filter-tab" data-platform="ps3">PlayStation 3</button>
+                        <button class="filter-tab" data-platform="pc">PC</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- قسم الألعاب -->
+        <section id="games" class="games-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">مكتبة الألعاب</h2>
+                    <p class="section-description">اكتشف مجموعة واسعة من أفضل الألعاب المتاحة للتحميل</p>
+                </div>
+                
+                <div class="games-grid" id="gamesGrid">
+                    <!-- سيتم ملء الألعاب هنا بواسطة JavaScript -->
+                </div>
+                
+                <div class="load-more-container">
+                    <button class="btn btn-outline" id="loadMoreBtn" onclick="loadMoreGames()">
+                        تحميل المزيد من الألعاب
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- قسم المنصات -->
+        <section id="platforms" class="platforms-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">المنصات المدعومة</h2>
+                    <p class="section-description">نوفر ألعاب لجميع المنصات الشائعة</p>
+                </div>
+                
+                <div class="platforms-grid">
+                    <div class="platform-card" data-platform="ps4">
+                        <div class="platform-icon">
+                            <span class="platform-fallback">PS4</span>
+                        </div>
+                        <h3>PlayStation 4</h3>
+                        <p>أحدث ألعاب البلايستيشن 4 الحصرية والمتعددة المنصات</p>
+                        <div class="platform-stats">
+                            <span id="ps4Count">0</span> لعبة متاحة
+                        </div>
+                    </div>
+                    
+                    <div class="platform-card" data-platform="ps3">
+                        <div class="platform-icon">
+                            <span class="platform-fallback">PS3</span>
+                        </div>
+                        <h3>PlayStation 3</h3>
+                        <p>الألعاب الكلاسيكية والمحبوبة من جيل البلايستيشن 3</p>
+                        <div class="platform-stats">
+                            <span id="ps3Count">0</span> لعبة متاحة
+                        </div>
+                    </div>
+                    
+                    <div class="platform-card" data-platform="pc">
+                        <div class="platform-icon">
+                            <span class="platform-fallback">PC</span>
+                        </div>
+                        <h3>PC</h3>
+                        <p>ألعاب الكمبيوتر الشخصي بأعلى جودة وأداء</p>
+                        <div class="platform-stats">
+                            <span id="pcCount">0</span> لعبة متاحة
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- قسم حول الموقع -->
+        <section id="about" class="about-section">
+            <div class="container">
+                <div class="about-content">
+                    <div class="about-text">
+                        <h2 class="section-title">حول 4GAMER</h2>
+                        <p>
+                            4GAMER هو أكبر مجتمع عربي لمحبي الألعاب، نوفر لك أفضل الألعاب بروابط تحميل مباشرة وسريعة.
+                            هدفنا هو جعل تجربة الحصول على الألعاب سهلة ومريحة لجميع اللاعبين العرب.
+                        </p>
+                        
+                        <div class="features-list">
+                            <div class="feature-item">
+                                <div class="feature-icon">⚡</div>
+                                <div class="feature-text">
+                                    <h4>تحميل سريع</h4>
+                                    <p>روابط مباشرة بأقصى سرعة ممكنة</p>
+                                </div>
+                            </div>
+                            
+                            <div class="feature-item">
+                                <div class="feature-icon">🎮</div>
+                                <div class="feature-text">
+                                    <h4>مكتبة ضخمة</h4>
+                                    <p>آلاف الألعاب لجميع المنصات</p>
+                                </div>
+                            </div>
+                            
+                            <div class="feature-item">
+                                <div class="feature-icon">🔄</div>
+                                <div class="feature-text">
+                                    <h4>تحديث مستمر</h4>
+                                    <p>إضافة ألعاب جديدة بانتظام</p>
+                                </div>
+                            </div>
+                            
+                            <div class="feature-item">
+                                <div class="feature-icon">🛡️</div>
+                                <div class="feature-text">
+                                    <h4>آمن وموثوق</h4>
+                                    <p>جميع الملفات مفحوصة وآمنة</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="about-visual">
+                        <div class="stats-showcase">
+                            <div class="stat-showcase">
+                                <div class="stat-number-big">17K+</div>
+                                <div class="stat-label-big">متابع نشط</div>
+                            </div>
+                            <div class="stat-showcase">
+                                <div class="stat-number-big">1M+</div>
+                                <div class="stat-label-big">تحميل شهرياً</div>
+                            </div>
+                            <div class="stat-showcase">
+                                <div class="stat-number-big">99%</div>
+                                <div class="stat-label-big">رضا المستخدمين</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- الفوتر -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3 class="footer-title">4GAMER</h3>
+                    <p class="footer-description">
+                        أكبر مكتبة ألعاب عربية على الإنترنت. نوفر لك أفضل الألعاب بروابط مباشرة وآمنة.
+                    </p>
+                    <div class="social-links">
+                        <a href="https://t.me/C9_9M" target="_blank" class="social-link" title="القناة الرئيسية">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69a.2.2 0 00-.05-.18c-.06-.05-.14-.03-.21-.02-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.63-.2-1.12-.31-1.08-.66.02-.18.27-.36.74-.55 2.92-1.27 4.86-2.11 5.83-2.51 2.78-1.16 3.35-1.36 3.73-1.36.08 0 .27.02.39.12.1.08.13.19.14.27-.01.06.01.24 0 .38z"/>
+                            </svg>
+                        </a>
+                        <a href="https://t.me/GAMESPS4I" target="_blank" class="social-link" title="قناة الألعاب">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69a.2.2 0 00-.05-.18c-.06-.05-.14-.03-.21-.02-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.63-.2-1.12-.31-1.08-.66.02-.18.27-.36.74-.55 2.92-1.27 4.86-2.11 5.83-2.51 2.78-1.16 3.35-1.36 3.73-1.36.08 0 .27.02.39.12.1.08.13.19.14.27-.01.06.01.24 0 .38z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h4 class="footer-subtitle">روابط سريعة</h4>
+                    <ul class="footer-links">
+                        <li><a href="#home">الرئيسية</a></li>
+                        <li><a href="#games">الألعاب</a></li>
+                        <li><a href="#platforms">المنصات</a></li>
+                        <li><a href="#about">حول الموقع</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4 class="footer-subtitle">المنصات</h4>
+                    <ul class="footer-links">
+                        <li><a href="#" onclick="filterByPlatform('ps4')">PlayStation 4</a></li>
+                        <li><a href="#" onclick="filterByPlatform('ps3')">PlayStation 3</a></li>
+                        <li><a href="#" onclick="filterByPlatform('pc')">PC</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4 class="footer-subtitle">تواصل معنا</h4>
+                    <div class="contact-info">
+                        <p>للاستفسارات والاقتراحات:</p>
+                        <a href="https://t.me/C9_9M" target="_blank" class="contact-link">
+                            راسلنا على التليجرام
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="footer-bottom-content">
+                    <p>&copy; 2025 4GAMER. جميع الحقوق محفوظة.</p>
+                    <p class="footer-note">
+                        هذا الموقع مخصص للأغراض التعليمية والترفيهية فقط.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- زر العودة للأعلى -->
+    <button id="backToTop" class="back-to-top" onclick="scrollToTop()">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="m18 15-6-6-6 6"/>
+        </svg>
+    </button>
+
+    <script src="script.js"></script>
 </body>
 </html>
