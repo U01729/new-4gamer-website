@@ -1,0 +1,122 @@
+[
+    {
+        "id": "ghost-of-tsushima",
+        "name": "Ghost of Tsushima",
+        "description": "لعبة أكشن ومغامرات عالم مفتوح حصرية لجهاز بلايستيشن 4. اكتشف جمال جزيرة تسوشيما وقاتل المغول في هذه التحفة الفنية.",
+        "platform": "ps4",
+        "thumbnail": "assets/ghost_of_tsushima_thumb.jpg",
+        "link": "game-pages/ps4/ghost-of-tsushima/index.html"
+    },
+    {
+        "id": "far-cry-3-classic",
+        "name": "Far Cry 3 Classic Edition",
+        "description": "إصدار كلاسيكي محسن للعبة التصويب الشهيرة Far Cry 3. استكشف الجزر الاستوائية وواجه القراصنة في مغامرة لا تُنسى.",
+        "platform": "ps4",
+        "thumbnail": "assets/far_cry_3_thumb.jpg",
+        "link": "game-pages/ps4/far-cry-3-classic/index.html"
+    },
+    {
+        "id": "the-last-of-us-part-2",
+        "name": "The Last of Us Part II",
+        "description": "تكملة ملحمة البقاء على قيد الحياة. انضم إلى إيلي في رحلة عاطفية مليئة بالانتقام والمغفرة في عالم ما بعد الكارثة.",
+        "platform": "ps4",
+        "thumbnail": "assets/tlou2_thumb.jpg",
+        "link": "game-pages/ps4/the-last-of-us-part-2/index.html"
+    },
+    {
+        "id": "god-of-war-2018",
+        "name": "God of War (2018)",
+        "description": "إعادة تصور جذرية لسلسلة God of War. اتبع كريتوس وابنه أتريوس في رحلة عبر الأساطير الإسكندنافية.",
+        "platform": "ps4",
+        "thumbnail": "assets/god_of_war_thumb.jpg",
+        "link": "game-pages/ps4/god-of-war-2018/index.html"
+    },
+    {
+        "id": "spider-man-ps4",
+        "name": "Marvel's Spider-Man",
+        "description": "كن الرجل العنكبوت في نيويورك المفتوحة. لعبة أكشن رائعة تجمع بين القتال المذهل والتأرجح عبر المدينة.",
+        "platform": "ps4",
+        "thumbnail": "assets/spiderman_thumb.jpg",
+        "link": "game-pages/ps4/spider-man-ps4/index.html"
+    },
+    {
+        "id": "horizon-zero-dawn",
+        "name": "Horizon Zero Dawn",
+        "description": "استكشف عالماً ما بعد الكارثة حيث تحكم الآلات الأرض. انضم إلى ألوي في مغامرة اكتشاف الحقيقة.",
+        "platform": "ps4",
+        "thumbnail": "assets/horizon_thumb.jpg",
+        "link": "game-pages/ps4/horizon-zero-dawn/index.html"
+    },
+    {
+        "id": "uncharted-4",
+        "name": "Uncharted 4: A Thief's End",
+        "description": "المغامرة الأخيرة لناثان دريك. ابحث عن كنز القراصنة الأسطوري في هذه الرحلة المليئة بالإثارة والعمل.",
+        "platform": "ps4",
+        "thumbnail": "assets/uncharted4_thumb.jpg",
+        "link": "game-pages/ps4/uncharted-4/index.html"
+    },
+    {
+        "id": "bloodborne",
+        "name": "Bloodborne",
+        "description": "لعبة أكشن RPG مظلمة ومتحدية من صناع Dark Souls. استكشف مدينة يارنام الملعونة وواجه الكوابيس.",
+        "platform": "ps4",
+        "thumbnail": "assets/bloodborne_thumb.jpg",
+        "link": "game-pages/ps4/bloodborne/index.html"
+    },
+    {
+        "id": "red-dead-redemption-2",
+        "name": "Red Dead Redemption 2",
+        "description": "ملحمة الغرب الأمريكي. عش حياة الخارج عن القانون آرثر مورغان في عالم مفتوح مذهل ومفصل.",
+        "platform": "ps4",
+        "thumbnail": "assets/rdr2_thumb.jpg",
+        "link": "game-pages/ps4/red-dead-redemption-2/index.html"
+    },
+    {
+        "id": "persona-5-royal",
+        "name": "Persona 5 Royal",
+        "description": "النسخة المحسنة من لعبة الـ JRPG الشهيرة. عش حياة طالب ثانوي بالنهار ولص قلوب بالليل في طوكيو.",
+        "platform": "ps4",
+        "thumbnail": "assets/persona5_thumb.jpg",
+        "link": "game-pages/ps4/persona-5-royal/index.html"
+    },
+    {
+        "id": "the-last-of-us",
+        "name": "The Last of Us",
+        "description": "رحلة البقاء الكلاسيكية. انضم إلى جويل وإيلي في رحلة عبر أمريكا المدمرة بحثاً عن الأمل.",
+        "platform": "ps3",
+        "thumbnail": "assets/tlou_ps3_thumb.jpg",
+        "link": "game-pages/ps3/the-last-of-us/index.html"
+    },
+    {
+        "id": "grand-theft-auto-v",
+        "name": "Grand Theft Auto V",
+        "description": "استكشف لوس سانتوس في هذه اللعبة الضخمة. ثلاث شخصيات، قصة واحدة، وعالم لا نهائي من الجرائم والمغامرات.",
+        "platform": "ps3",
+        "thumbnail": "assets/gtav_ps3_thumb.jpg",
+        "link": "game-pages/ps3/grand-theft-auto-v/index.html"
+    },
+    {
+        "id": "cyberpunk-2077",
+        "name": "Cyberpunk 2077",
+        "description": "استكشف مستقبل نايت سيتي في هذه اللعبة المستقبلية. كن V واكتشف أسرار المدينة الضخمة.",
+        "platform": "pc",
+        "thumbnail": "assets/cyberpunk_thumb.jpg",
+        "link": "game-pages/pc/cyberpunk-2077/index.html"
+    },
+    {
+        "id": "witcher-3-wild-hunt",
+        "name": "The Witcher 3: Wild Hunt",
+        "description": "أفضل لعبة RPG في العقد. انضم إلى جيرالت من ريفيا في بحثه عن سيري في عالم مفتوح ضخم ومليء بالتفاصيل.",
+        "platform": "pc",
+        "thumbnail": "assets/witcher3_thumb.jpg",
+        "link": "game-pages/pc/witcher-3-wild-hunt/index.html"
+    },
+    {
+        "id": "elden-ring",
+        "name": "Elden Ring",
+        "description": "تحفة فنية من FromSoftware و George R.R. Martin. استكشف عالم Lands Between المظلم والجميل.",
+        "platform": "pc",
+        "thumbnail": "assets/eldenring_thumb.jpg",
+        "link": "game-pages/pc/elden-ring/index.html"
+    }
+]
